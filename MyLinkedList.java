@@ -57,12 +57,22 @@ public class MyLinkedList{
     if (index >= size || index < 0){
       throw new IndexOutOfBoundsException();
     }
-    Node current = getNode(index);
+    Node current = findNode(index);
     String answer = current.data();
     current.setData(value);
     return answer;
   }
-  
-  public String toString();
+
+  public String toString(){
+
+  }
+
   //Any helper method that returns a Node object MUST BE PRIVATE!
+  private Node findNode(int index){
+    Node current = start;
+    for(int i = 0; i < index; i++){
+      current = current.getNext();
+    }
+    return current;
+  }
 }

@@ -1,28 +1,31 @@
 public class Node{
- private String data;
- private Node next, prev;
+  private String data;
+  private Node next, prev;
 
- //Write get/set methods for all three instance variables.
+  //Write get/set methods for all three instance variables.
+  public Node(String value){
+    data = value;
+  }
+  public String getData(){
+    return data;
+  }
 
- public Node(String value){
-   data = value;
- }
+  public void setData(String data){
+    data = data;
+  }
 
- public String getData(){
-   return data;
- }
+  public Node getNext(){
+    return next;
+  }
+  public void setNext(Node next){
+    next = next;
+  }
 
- public void setData(String data){
-   data = data;
- }
+  public Node getPrev(){
+    return prev;
+  }
 
- public Node getNext(){
-   return next;
- }
-
- public void setNext(Node next){
-   next = next;
- }
- public Node getPrev();
- public void setPrev(Node prev);
+  public void setPrev(Node prev){
+    prev = prev;
+  }
 }

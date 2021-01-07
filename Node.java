@@ -3,10 +3,20 @@ public class Node{
  private Node next, prev;
 
  //Write get/set methods for all three instance variables.
- public String getData();
- public void setData(String data);
- public String getNext();
+
+ public Node(String value){
+   data = value;
+ }
+
+ public String getData(){
+   return data;
+ }
+
+ public void setData(String data){
+   data = data;
+ }
+ public Node getNext();
  public void setNext(Node next);
- public String getPrev();
+ public Node getPrev();
  public void setPrev(Node prev);
 }

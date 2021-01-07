@@ -64,7 +64,17 @@ public class MyLinkedList{
   }
 
   public String toString(){
-
+    if (size == 0) return "[]";
+    String answer = "[";
+    Node current = start;
+    for (int i = 0; i < size; i++){
+      answer += current;
+      if (i != size-1){
+        answer += ", ";
+      }
+      current = current.getNext();
+    }
+    answer += "]";
   }
 
   //Any helper method that returns a Node object MUST BE PRIVATE!

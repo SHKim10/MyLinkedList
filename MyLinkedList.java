@@ -23,7 +23,31 @@ public class MyLinkedList{
    return true;
  }
 
- public boolean add(int index, String value);
+ public boolean add(int index, String value){
+   Node a = new Node(value);
+   if (index == 0){
+     Node insert = new Node(value);
+     start.setPrev(insert);
+     insert.setNext(start);
+     start = insert;
+     return true;
+   }
+   if (index == size){
+     return add(value);
+   }
+   Node current = start;
+   for (int i = 0; i < index; i++){
+     current = current.getNext();
+   }
+   Node insert = new Node(value);
+   Node next = current.getNext();
+   current.setNext(insert);
+   insert.setPrev(current);
+   insert.setNext(next);
+   next.setPrev(insert);
+   return true;
+ }
+}
  public String get(int index);
  public String set(int index, String value);
  public String toString();

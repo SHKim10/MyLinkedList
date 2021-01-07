@@ -15,8 +15,14 @@ public class Node{
  public void setData(String data){
    data = data;
  }
- public Node getNext();
- public void setNext(Node next);
+
+ public Node getNext(){
+   return next;
+ }
+
+ public void setNext(Node next){
+   next = next;
+ }
  public Node getPrev();
  public void setPrev(Node prev);
 }

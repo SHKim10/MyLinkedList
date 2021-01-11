@@ -101,7 +101,7 @@ public class MyLinkedList{
     }
     if (index == 0){
       start = start.getNext();
-      start.setPre(null);
+      start.setPrev(null);
     } else if (index == size-1){
       end = end.getPrev();
       end.setNext(null);
@@ -121,7 +121,13 @@ public class MyLinkedList{
   *@postcondition: The size of this is now the combined sizes of both original lists
   */
   public void extend(MyLinkedList other){
-    
+    end.setNext(other.start);
+    other.start.setPrev(end);
+    end = other.end;
+    size += other.size;
+    other.size = 0;
+    other.start = null;
+    other.end = null;
   }
 
   //Any helper method that returns a Node object MUST BE PRIVATE!
